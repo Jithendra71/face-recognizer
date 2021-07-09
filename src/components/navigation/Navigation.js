@@ -1,10 +1,9 @@
-import React,{ Component } from 'react';
+import React from 'react';
 
-class Navigation extends Component {
-render() {
-    return <h1 className = 'tr f3 link dim black underline pa3 pointer'>Sign Out</h1>
+const Navigation= ({ onSignout }) =>{
+    return <h1 onClick={onSignout} className = 'tr f3 link dim black underline pa3 pointer'>Sign Out</h1>
 }
-}
+
 
 
 export default Navigation;
