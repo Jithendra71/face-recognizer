@@ -1,7 +1,20 @@
 import React from 'react';
 
-const Navigation= ({ onSignout }) =>{
-    return <h1 onClick={onSignout} className = 'tr f3 link dim black underline pa3 pointer'>Sign Out</h1>
+const Navigation= ({ isSignedin, onSignout }) =>{
+    if(isSignedin){
+    return (
+        <nav style={{display:'flex', justifyContent:'flex-end'}}>
+            <p onClick={()=>onSignout('signin')} className = 'tr f3 link dim black underline pa3 pointer'>Sign Out</p>
+        </nav>
+    )}
+    else {
+        return(
+            <nav style={{display:'flex', justifyContent:'flex-end'}}>
+                <p onClick={()=>onSignout('signin')} className = 'tr f3 link dim black underline pa3 pointer'>Sign In</p>
+                <p onClick={()=>onSignout('Register')} className = 'tr f3 link dim black underline pa3 pointer'>Register</p>
+            </nav>
+        )
+    }
 }
 
 
