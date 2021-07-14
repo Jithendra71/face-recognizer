@@ -23,7 +23,8 @@ const Signin = ({onSignin}) =>{
           <div className="lh-copy mt3">
             <a href="#0" onClick={()=>onSignin('Register')} className="f6 link dim black db">Register</a>
           </div>
-        </div>
+        </div
+        >
       </main>
     </article>
   );
